@@ -1,0 +1,112 @@
+
+g
+SYSTEM@DIN66009615 MINGW64 ~
+$ cd /d/git
+bash: cd: /d/git: No such file or directory
+
+SYSTEM@DIN66009615 MINGW64 ~
+$ cd /c/git
+
+SYSTEM@DIN66009615 MINGW64 /c/git
+$ get clone https://github.com/Dhanarao/gitHubDemoRepo.git
+bash: get: command not found
+
+SYSTEM@DIN66009615 MINGW64 /c/git
+$ get clone
+bash: get: command not found
+
+SYSTEM@DIN66009615 MINGW64 /c/git
+$ git clone https://github.com/Dhanarao/gitHubDemoRepo.git
+Cloning into 'gitHubDemoRepo'...
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 27 (delta 7), reused 27 (delta 7), pack-reused 0
+Unpacking objects: 100% (27/27), done.
+
+SYSTEM@DIN66009615 MINGW64 /c/git
+$ ls
+gitHubDemoRepo/
+
+SYSTEM@DIN66009615 MINGW64 /c/git
+$ cd gitHubDemoRepo/
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ ls
+nerfile5  newfile1  newfile3  tmpdevfeaturefileupload.txt
+newfile   newfile2  newfile4  tmpfile1
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ vi newfile
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ ls
+nerfile5  newfile1  newfile3  tmpdevfeaturefileupload.txt
+newfile   newfile2  newfile4  tmpfile1
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ touch newfile
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ vi newfile
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ git  add .
+warning: LF will be replaced by CRLF in newfile.
+The file will have its original line endings in your working directory.
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   newfile
+
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com':
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ git push
+Everything up-to-date
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ ls
+nerfile5  newfile1  newfile3  tmpdevfeaturefileupload.txt
+newfile   newfile2  newfile4  tmpfile1
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ git remote -v
+origin  https://github.com/Dhanarao/gitHubDemoRepo.git (fetch)
+origin  https://github.com/Dhanarao/gitHubDemoRepo.git (push)
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ git remote show orgin
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/Dhanarao/gitHubDemoRepo.git
+  Push  URL: https://github.com/Dhanarao/gitHubDemoRepo.git
+  HEAD branch: master
+  Remote branches:
+    development tracked
+    devfeature  tracked
+    master      tracked
+    testing     tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+SYSTEM@DIN66009615 MINGW64 /c/git/gitHubDemoRepo (master)
+$
